@@ -1,6 +1,10 @@
 import "./style.css";
 import logo from "/src/logo.png";
 import img1 from "/src/img1.png";
+import proyecto1 from "/src/proyecto1.PNG";
+import proyecto2 from "/src/proyecto2.PNG";
+import proyecto21 from "/src/proyecto2-1.PNG";
+
 
 // Insertamos el contenido HTML para el portafolio en el div con id "app"
 document.querySelector("#app").innerHTML = `
@@ -10,9 +14,9 @@ document.querySelector("#app").innerHTML = `
     <h1 class="hidden sm:block md:text-3xl text-2xl font-semibold mr-4">Sebastián Holguín Dev</h1>
 
     <ul class="flex gap-6 text-sm sm:text-base">
-      <li><a href="#about" class="hover:text-red-400">Sobre mí</a></li>
-      <li><a href="#projects" class="hover:text-yellow-400">Proyectos</a></li>
-      <li><a href="#contact" class="hover:text-yellow-400">Contacto</a></li>
+      <li><a href="#about" class="hover:text-amber-700">Sobre mí</a></li>
+      <li><a href="#projects" class="hover:text-amber-700">Proyectos</a></li>
+      <li><a href="#contact" class="hover:text-amber-700">Contacto</a></li>
     </ul>
   </nav>
 </header>
@@ -53,7 +57,7 @@ document.querySelector("#app").innerHTML = `
       <div class="mx-auto pb-4 px-6 text-center md:w-1/2 w-full text-white">
         <h2 class="md:text-5xl text-3xl font-semibold mb-6">Sobre mí</h2>
         <p class="md:text-3xl text-xl">
-          Soy Sebastián Holguín, sueño con ser un gran desarrollador.
+          Soy <span class="text-amber-700">Sebastián Holguín</span>, sueño con ser un gran desarrollador.
           Estoy en busca de una empresa que me guíe y me ayude a crecer como programador,
           seguir buenas prácticas como el código limpio y mejorar cada día en lo que me apasiona.
         </p>
@@ -79,12 +83,13 @@ document.querySelector("#app").innerHTML = `
           <a href="https://drive.google.com/file/d/1_l1msroVry7IOmttEqXYAyhKSASSDKpH/view?usp=sharing" target="_blank"
             class="transition-all text-[#BB4D00] hover:scale-200 duration-300" title="Ver CV">
 
-            <svg viewBox="0 0 24 24" height="50" width="50" xmlns="http://www.w3.org/2000/svg"
-              stroke="currentColor" fill="#1F2937">
+            <svg viewBox="0 0 24 24" height="50" width="50" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
+              fill="#1F2937">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier"></g>
               <g id="SVGRepo_iconCarrier">
-                <path d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-3 17h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/>
+                <path
+                  d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-3 17h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z" />
               </g>
             </svg>
             </svg>
@@ -137,29 +142,54 @@ document.querySelector("#app").innerHTML = `
 <section id="projects" class="py-12 bg-[#1e1e2f] ">
   <div class="w-full mx-auto px-6 text-center text-white">
     <h2 class="text-3xl font-semibold mb-6">Mis Proyectos</h2>
-    <p class="text-lg text-white" >
+    <p class="text-lg text-white">
       Aquí puedes ver algunos de mis proyectos más recientes:
     </p>
     <!-- Lista de proyectos, puedes agregar más según sea necesario -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold mb-4 text-gray-700">Proyecto 1</h3>
-        <p class="text-gray-700 mb-4">Descripción breve del proyecto.</p>
-        <a href="#" class="text-blue-500">Ver más</a>
+        <img src="${proyecto1}" alt="Proyecto 1" class="mr-4 pb-4">
+        <h3 class="text-xl font-semibold mb-4 text-gray-700">Sebas holguin web</h3>
+        <p class="text-gray-700 mb-4">Creé mi portafolio utilizando HTML, JavaScript y Tailwind CSS, con Vite para
+          optimizar el rendimiento. El diseño es responsive, adaptándose a todos los dispositivos. Implementé buenas
+          prácticas de SEO como etiquetas meta mejorando la visibilidad en los motores de búsqueda.</p>
+        <a href="https://github.com/holguin356/sebasholguinweb" target="_blank" class="text-blue-500">Ver más</a>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold mb-4 text-gray-700">Proyecto 2</h3>
-        <p class="text-gray-700 mb-4">Descripción breve del proyecto.</p>
-        <a href="#" class="text-blue-500">Ver más</a>
+        <div class="bg-white p-6 rounded-lg shadow-md relative group ">
+          <!-- Imagen principal -->
+          <img src="${proyecto2}" alt="Proyecto 2"
+            class=" inset-0 object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0" />
+
+          <!-- Imagen en hover -->
+          <img src="${proyecto21}" alt="Proyecto 2"
+            class="absolute inset-0 object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-700">Proyecto MiRefugio</h3>
+            <p class="text-gray-700 mb-4">Aplicación web interna para gestión de hospedajes, desarrollada con C#,
+              Blazor,
+              Entity Framework Core y arquitectura en N capas. Administra usuarios, pisos, habitaciones y servicios con
+              control de acceso por roles, login seguro y panel de estadísticas. Usa patrones como CQRS y DTOs para
+              mantener
+              el código limpio y escalable.</p>
+            <a href="#" class="text-blue-500">Ver más</a>
+          </div>
+        </div>
       </div>
+      <!--
       <div class="bg-white p-6 rounded-lg shadow-md">
         <h3 class="text-xl font-semibold mb-4 text-gray-700">Proyecto 3</h3>
         <p class="text-gray-700 mb-4">Descripción breve del proyecto.</p>
         <a href="#" class="text-blue-500">Ver más</a>
       </div>
+      -->
     </div>
   </div>
 </section>
+
+<!-- Transición -->
+<div class="h-6 bg-gradient-to-b from-[#1e1e2f] to-[#F3F4F6]"></div>
+
 
 <!-- Sección de contacto -->
 <section id="contact" class="bg-gray-100 py-12">
@@ -169,8 +199,17 @@ document.querySelector("#app").innerHTML = `
       Si tienes alguna pregunta o quieres discutir una colaboración, no dudes en ponerte en contacto conmigo.
     </p>
     <div class="mt-8">
-      <a href="mailto:sebasholguin356@gmail.com" class="text-blue-500">Enviar correo</a>
+      <a href="https://wa.me/573235186098?text=Hola%20Sebasti%C3%A1n%2C%20vi%20tu%20portafolio%20web%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20trabajo%20como%20desarrollador."
+        target="_blank"
+        class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-xl transition-all duration-200 shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 32 32">
+          <path
+            d="M16 0c-8.837 0-16 7.163-16 16 0 2.837.74 5.557 2.137 7.977l-2.137 8.023 8.229-2.145c2.377 1.295 5.064 1.978 7.771 1.978 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.347 0-4.637-.627-6.659-1.815l-.476-.278-4.884 1.273 1.295-4.792-.311-.492c-1.23-1.946-1.883-4.185-1.883-6.495 0-6.703 5.457-12.161 12.161-12.161s12.161 5.457 12.161 12.161c0 6.703-5.457 12.161-12.161 12.161zM23.529 19.751c-.351-.176-2.078-1.023-2.4-1.139s-.559-.176-.791.176-.911 1.139-1.118 1.377c-.207.234-.396.263-.747.088-.351-.176-1.479-.547-2.819-1.744-1.042-.929-1.744-2.077-1.949-2.428-.207-.351-.021-.54.156-.714.162-.162.351-.421.527-.632.176-.207.234-.351.351-.586.117-.234.059-.439-.029-.615s-.791-1.895-1.085-2.59c-.284-.684-.574-.59-.791-.602l-.676-.012c-.234 0-.615.088-.935.439s-1.23 1.202-1.23 2.929 1.26 3.395 1.435 3.629c.176.234 2.493 3.805 6.042 5.184.843.364 1.5.58 2.012.741.844.268 1.611.23 2.22.14.676-.102 2.078-.848 2.371-1.665.293-.818.293-1.52.205-1.665-.088-.146-.322-.234-.673-.41z" />
+        </svg>
+        Enviar mensaje de WhatsApp
+      </a>
     </div>
+
   </div>
 </section>
 `;
