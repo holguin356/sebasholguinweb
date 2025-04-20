@@ -1,20 +1,39 @@
-import './style.css'
-import logo from '/src/logo.png'
+import "./style.css";
+import logo from "/src/logo.png";
+import img1 from "/src/img1.png";
 
 // Insertamos el contenido HTML para el portafolio en el div con id "app"
-document.querySelector('#app').innerHTML = `
-  <header class="w-full bg-gray-800 text-white py-4 px-4">
-    <nav class="w-full flex justify-between items-center">
-      <img src="${logo}" alt="logo portafolio" class="logo__nav">
-      <h1 class="text-2xl font-semibold">Sebastián Holguín Dev</h1>
+document.querySelector("#app").innerHTML = `
+  <header class="w-full bg-[#1e1e2f] text-white py-4 px-4 shadow-md">
+    <nav class="w-full mx-auto flex justify-between items-center">
+      <img src="${logo}" alt="logo portafolio" class="mr-4 logo__nav">
+      <h1 class="hidden sm:block md:text-3xl text-2xl font-semibold mr-4">Sebastián Holguín Dev</h1>
 
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:text-gray-300">Sobre mí</a></li>
-        <li><a href="#projects" class="hover:text-gray-300">Proyectos</a></li>
-        <li><a href="#contact" class="hover:text-gray-300">Contacto</a></li>
+      <ul class="flex gap-6 text-sm sm:text-base">
+        <li><a href="#about" class="hover:text-red-400">Sobre mí</a></li>
+        <li><a href="#projects" class="hover:text-yellow-400">Proyectos</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contacto</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- Sección introducción -->
+  <section id="introduction" class="bg-gray-100">
+    <div class="w-full mx-auto text-left bg-amber-700 ">
+      <p class="text-[#1e1e2f] text-5xl pt-5 pb-2 px-2 font-semibold">Hola! Soy,</p>
+<div class="flex justify-between w-full mx-auto text-left bg-[#1e1e2f]">
+  <div class="text-left w-1/2">
+    <p class="text-white text-5xl px-3 font-semibold">Sebastián Holguín Parra Desarrollador de Software</p>
+    <br>
+    <p class="text-white text-5xl px-3 font-semibold">
+      "El <span class="text-amber-700">código</span> es mi pastor y con el nada me faltará"
+    </p>
+  </div>
+  <div class="w-xl justify-items-end">
+    <img src="${img1}" alt="Programando" class="w-full rounded-xl shadow-lg" />
+  </div>
+  </div>
+  </section>
 
   <!-- Sección sobre mí -->
   <section id="about" class="bg-gray-100 py-12">
@@ -66,5 +85,4 @@ document.querySelector('#app').innerHTML = `
       </div>
     </div>
   </section>
-`
-
+`;
